@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: rgb(0, 0, 0)
+    }
+    .hit {
+      background: url('ship.png')no-repeat center center;
+    }
+    .miss {
+      background: url('miss.png')no-repeat center center;
+    }
+    div#board {
+      position: relative;
+      width: 1024px;
+      height: 863px;
+      margin: auto;
+      background: url('board.jpg') no-repeat;
+    }
+    div#messageArea {
+      font-size: 33px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: rgb(83,175,19);
+    }
+    table {
+      position: absolute;
+      left: 173px;
+      top: 98px;
+      border-spacing: 0px;
+    }
+    td {
+      width: 94px;
+      height: 94px;
+    }
+    form {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      padding: 15px;
+      background-color: rgb(83,175,19);
+    }
+    form input {
+      background-color: rgb(152,207,113);
+      border-color: rgb(83,175,19);
+    }
+    .Btn {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#6e052f,#42030d,#370132,#260d8a,#9f310c,#77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #c1ca84;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+  }
+  
+  .Btn::before {
+    position: absolute;
+    content: "TEST";
+    color: #ffd277;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+  }
+  
+  .Btn:hover {
+    background-position: right;
+    transition-duration: 2s;
+  }
+  
+  .Btn:hover::before {
+    background-position: right;
+    transition-duration: 2s;
+  }
+  
+  .Btn:active {
+    transform: scale(0.95);
+  }
+  </style>
+
+  <title>I love JS</title>
+</head>
+<body>
+  <div id="board">
+    <div id="messageArea"></div>
+<table>
+  <tr>
+    <td id="00"></td><td id="01"></td><td id="02"></td><td id="03"></td><td id="04"></td><td id="05"></td><td id="06"></td>
+  </tr>
+  <tr>
+    <td id="10"></td><td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td><td id="15"></td><td id="16"></td>
+  </tr>
+  <tr>
+    <td id="20"></td><td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td><td id="25"></td><td id="26"></td>
+  </tr>
+  <tr>
+    <td id="30"></td><td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td><td id="35"></td><td id="36"></td>
+  </tr>
+  <tr>
+    <td id="40"></td><td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td><td id="45"></td><td id="46"></td>
+  </tr>
+  <tr>
+    <td id="50"></td><td id="51"></td><td id="52"></td><td id="53"></td><td id="54"></td><td id="55"></td><td id="56"></td>
+  </tr>
+  <tr>
+    <td id="60"></td><td id="61"></td><td id="62"></td><td id="63"></td><td id="64"></td><td id="65"></td><td id="66"></td>
+  </tr>
+</table>
+<form>
+  <input type="text" id="guessInput" placeholder="Например b0">
+  <input class="Btn" type="button" id="fireButton" value="Fire!">
+</form>
+  </div>
+  <script src='java.js'></script>
+</body>
+</html>
